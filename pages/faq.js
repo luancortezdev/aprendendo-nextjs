@@ -1,7 +1,10 @@
 import axios from 'axios';
-import Head from 'next/head'
+// import Head from 'next/head'
+import FAQScreen from '../src/screens/FAQScreen';
 
-import Link from '../src/components/Link';
+export default FAQScreen; 
+
+// import Link from '../src/components/Link';
 
 export async function getStaticProps() {
 
@@ -21,32 +24,28 @@ export async function getStaticProps() {
 
   
 
-export default function FAQPage({faq, qualquercoisa}) {
-    // const [faq, setFaq] = useState([])
-    // useEffect(() => {
-        
-    // }, []) 
-    return (
-        <div>
-            <Head>
-                <title>FAQ - Alura Cases Campanha</title>
-            </Head>
-            <h1>Alura Cases - Páginas de Perguntas FAQ</h1>
-            <Link href="/">
-                Ir para a home
+// export default function FAQPage({faq}) {
+//     return (
+//         <div>
+//             <Head>
+//                 <title>FAQ - Alura Cases Campanha</title>
+//             </Head>
+//             <h1>Alura Cases - Páginas de Perguntas FAQ</h1>
+//             <Link href="/">
+//                 Ir para a home
                 
-            </Link>
-            <ul>
-				{/* {faq.map((faq) => ( */}
-                {faq.map(({question, answer}) => (
-					<li key={question}>
-						<article>
-							<h2>{question}</h2>
-							<p>{answer}</p>
-						</article>
-					</li>
-				))}
-            </ul>
-        </div>
-    )
-}
+//             </Link>
+//             <ul>
+// 				{/* {faq.map((faq) => ( */}
+//                 {faq.map(({question, answer}) => (
+// 					<li key={question}>
+// 						<article>
+// 							<h2>{question}</h2>
+// 							<p>{answer}</p>
+// 						</article>
+// 					</li>
+// 				))}
+//             </ul>
+//         </div>
+//     )
+// }
